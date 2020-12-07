@@ -23,6 +23,7 @@ def test_facebook_title():
     driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.maximize_window()
     driver.get('https://www.facebook.com/')
+    driver.get_screenshot_as_file()
     assert driver.title == 'Facebook – log in or sign up'
     driver.quit()
 
